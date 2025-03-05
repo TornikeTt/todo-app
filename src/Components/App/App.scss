@@ -1,0 +1,69 @@
+// Primary
+$C1_bright-blue: hsl(220, 98%, 61%);
+$C2_check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+// Neutral - Light Theme
+$C3_very-light-gray: hsl(0, 0%, 98%);
+$C4_very-light-grayish-blue: hsl(236, 33%, 92%);
+$C5_light-grayish-blue: hsl(233, 11%, 84%);
+$C6_dark-grayish-blue: hsl(236, 9%, 61%);
+$C7_very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+// Neutral - Dark Theme
+$C8_very-dark-blue: hsl(235, 21%, 11%);
+$C9_very-dark-desaturated-blue: hsl(235, 24%, 19%);
+$C10_light-grayish-blue: hsl(234, 39%, 85%);
+$C11_light-grayish-blue-hover: hsl(236, 33%, 92%);
+$C12_dark-grayish-blue: hsl(234, 11%, 52%);
+$C13_very-dark-grayish-blue: hsl(233, 14%, 35%);
+$C14_very-dark-grayish-blue-alt: hsl(237, 14%, 26%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.containert {
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+}
+
+.topImage {
+    top: 0;
+    position: absolute;
+}
+
+main {
+    width: 515px;
+    top: 78px;
+    margin: auto;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: 40px;
+        letter-spacing: 13px;
+        color: white;
+    }
+
+    .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
