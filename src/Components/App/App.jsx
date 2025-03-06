@@ -69,7 +69,7 @@ function App() {
                         />
                     </button>
                 </header>
-                <Form />
+                <Form isDarkMode={isDarkMode} />
             </main>
         </div>
     );
