@@ -32,20 +32,24 @@ body {
 }
 
 .containert {
+    position: relative;
+
     width: 100%;
     min-height: 100vh;
 
-    position: relative;
+    padding-bottom: 100px;
+    overflow-y: auto;
 }
 
 .topImage {
-    top: 0;
     position: absolute;
+    top: 0;
 }
 
 main {
+    position: relative;
+
     width: min(515px, 90%);
     top: 78px;
     margin: auto;
-    position: relative;
 }
