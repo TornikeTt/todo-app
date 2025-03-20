@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import Form from "../Form/Form";
+
+import Form from "../03-Form/Form";
+import Header from "../02-Header/Header";
+import Tasks from "../04-Tasks/Tasks";
 
 import "./App.scss";
 
-import darkModeBackgroundImage from "/images/bg-desktop-dark.jpg";
-import lightModeBackgroundImage from "/images/bg-desktop-light.jpg";
-
-import darkModeBackgroundImage_forMobile from "/images/bg-mobile-dark.jpg";
-import lightModeBackgroundImage_forMobile from "/images/bg-mobile-light.jpg";
+import darkModeBg from "/images/bg-desktop-dark.jpg";
+import lightModeBg from "/images/bg-desktop-light.jpg";
+import darkModeBgMobile from "/images/bg-mobile-dark.jpg";
+import lightModeBgMobile from "/images/bg-mobile-light.jpg";
 
 function App() {
     // State
@@ -34,11 +36,11 @@ function App() {
             backgroundImage: `url(${
                 windowWidth > 375
                     ? isDarkMode
-                        ? darkModeBackgroundImage
-                        : lightModeBackgroundImage
+                        ? darkModeBg
+                        : lightModeBg
                     : isDarkMode
-                    ? darkModeBackgroundImage_forMobile
-                    : lightModeBackgroundImage_forMobile
+                    ? darkModeBgMobile
+                    : lightModeBgMobile
             })`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "top",
@@ -46,30 +48,32 @@ function App() {
             width: "100%",
             height: "290px",
         },
+
+        input_field_backgroundColor: {
+            backgroundColor: isDarkMode
+                ? "hsl(235, 24%, 19%)"
+                : "hsl(0, 0%, 98%)",
+            color: isDarkMode ? "hsl(234, 39%, 85%)" : "hsl(235, 19%, 35%)",
+        },
+
+        circleColor: {
+            borderWidth: "1px",
+            borderColor: isDarkMode
+                ? "hsl(237, 14%, 26%)"
+                : "hsl(236, 33%, 92%)",
+            borderStyle: "solid",
+        },
     };
 
-    const toggleHendler = () => {
-        setIsDarkMode((prev) => !prev);
-    };
+    const toggleHandler = () => setIsDarkMode((prev) => !prev);
 
     return (
         <div style={styling.backgroundColor} className="containert">
             <div style={styling.getBackgroundImage} className="topImage"></div>
             <main>
-                <header>
-                    <h1>TODO</h1>
-                    <button onClick={toggleHendler} className="theme-toggle">
-                        <img
-                            src={
-                                isDarkMode
-                                    ? "./images/icon-sun.svg"
-                                    : "./images/icon-moon.svg"
-                            }
-                            alt="Toggle Theme"
-                        />
-                    </button>
-                </header>
-                <Form isDarkMode={isDarkMode} />
+                <Header isDarkMode={isDarkMode} toggleHandler={toggleHandler} />
+                <Form styling={styling} />
+                <Tasks styling={styling} />
             </main>
         </div>
     );

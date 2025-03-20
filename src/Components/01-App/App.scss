@@ -44,26 +44,8 @@ body {
 }
 
 main {
-    width: 515px;
+    width: min(515px, 90%);
     top: 78px;
     margin: auto;
     position: relative;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    h1 {
-        font-size: 40px;
-        letter-spacing: 13px;
-        color: white;
-    }
-
-    .theme-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
 }
