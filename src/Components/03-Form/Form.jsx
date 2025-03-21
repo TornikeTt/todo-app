@@ -12,18 +12,18 @@ function Form({ styling }) {
 
     return (
         <form>
-            <div
+            <label
                 className="input-container"
-                style={styling.input_field_backgroundColor}
-                onClick={handleContainerClick} // Focus input when container is clicked
+                style={styling?.input_field_backgroundColor}
+                onClick={handleContainerClick}
             >
-                <div className="circle" style={styling.circleColor}></div>
+                <div className="circle" style={styling?.circleColor}></div>
                 <input
-                    ref={inputRef} // Attach reference to input
-                    style={styling.input_field_backgroundColor}
+                    ref={inputRef}
+                    style={styling?.input_field_backgroundColor}
                     type="text"
                 />
-            </div>
+            </label>
         </form>
     );
 }
