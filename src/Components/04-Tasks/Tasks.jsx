@@ -1,5 +1,7 @@
 import "./Tasks.scss";
 
+import cross from "/images/icon-cross.svg";
+
 function Tasks({ styling }) {
     return (
         <div
@@ -10,9 +12,9 @@ function Tasks({ styling }) {
             <footer>
                 <p>5 items left</p>
                 <div className="task-filters">
-                    <button>All</button>
-                    <button>Active</button>
-                    <button>Completed</button>
+                    <button className="all">All</button>
+                    <button className="Active">Active</button>
+                    <button className="Completed">Completed</button>
                 </div>
                 <button>Clear Completed</button>
             </footer>

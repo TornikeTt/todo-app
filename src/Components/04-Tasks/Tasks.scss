@@ -24,8 +24,27 @@ footer {
     justify-content: space-between;
     margin: 0 auto;
 
+    color: hsl(235, 19%, 35%);
+    font-size: 14px;
+
+    button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: inherit;
+        cursor: pointer;
+
+        &:hover {
+            color: hsl(0, 0%, 98%);
+        }
+    }
+
     .task-filters {
         display: flex;
-        gap: 10px;
+        gap: 15px;
+
+        .all {
+            color: hsl(220, 98%, 61%);
+        }
     }
 }
