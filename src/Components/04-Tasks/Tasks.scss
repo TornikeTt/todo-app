@@ -33,9 +33,17 @@ footer {
         background-color: transparent;
         color: inherit;
         cursor: pointer;
+    }
 
+    .dark-hover {
         &:hover {
             color: hsl(0, 0%, 98%);
+        }
+    }
+
+    .light-hover {
+        &:hover {
+            color: hsl(235, 21%, 11%);
         }
     }
 
@@ -49,6 +57,7 @@ footer {
         }
     }
 }
+
 .toast {
     position: fixed;
     bottom: 20px;

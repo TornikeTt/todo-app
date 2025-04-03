@@ -73,7 +73,7 @@ function App() {
             <main>
                 <Header isDarkMode={isDarkMode} toggleHandler={toggleHandler} />
                 <Form styling={styling} />
-                <Tasks styling={styling} />
+                <Tasks styling={styling} isDarkMode={isDarkMode} />
             </main>
         </div>
     );
