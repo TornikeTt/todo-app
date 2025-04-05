@@ -15,6 +15,44 @@ function App() {
     // State
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [todo, setTodo] = useState([
+        {
+            id: 1,
+            text: "Complete online Javascript course",
+            completed: false,
+            filterAreay: "All",
+        },
+        {
+            id: 2,
+            text: "Jog around the park 3x a week",
+            completed: false,
+            filterAreay: "All",
+        },
+        {
+            id: 3,
+            text: "10 minutes meditation",
+            completed: false,
+            filterAreay: "All",
+        },
+        {
+            id: 4,
+            text: "Read for 1 hour",
+            completed: false,
+            filterAreay: "All",
+        },
+        {
+            id: 5,
+            text: "Pick up groceries",
+            completed: false,
+            filterAreay: "All",
+        },
+        {
+            id: 6,
+            text: "Complete Todo App on Frontend Mentor",
+            completed: false,
+            filterAreay: "All",
+        },
+    ]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -73,7 +111,12 @@ function App() {
             <main>
                 <Header isDarkMode={isDarkMode} toggleHandler={toggleHandler} />
                 <Form styling={styling} />
-                <Tasks styling={styling} isDarkMode={isDarkMode} />
+                <Tasks
+                    styling={styling}
+                    isDarkMode={isDarkMode}
+                    todo={todo}
+                    setTodo={setTodo}
+                />
             </main>
         </div>
     );

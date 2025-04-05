@@ -10,9 +10,49 @@
     flex-direction: column;
 }
 
-.tasks {
+.tasks-list {
     flex-grow: 1;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    .todo-task {
+        .todo-task__container {
+            width: 95%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+
+            .todo-task__info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .todo-task__status-indicator {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 100%;
+                    margin-left: 20px;
+                    flex-shrink: 0;
+                }
+
+                .todo-task__text {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 20px;
+                }
+            }
+
+            .todo-task__delete-btn {
+                padding: 8px;
+                border: none;
+                background: transparent;
+                border-radius: 9999px;
+                transition: background 0.2s ease;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 footer {

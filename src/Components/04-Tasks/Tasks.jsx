@@ -2,7 +2,7 @@ import "./Tasks.scss";
 import { useState, useCallback } from "react";
 import cross from "/images/icon-cross.svg";
 
-function Tasks({ styling, isDarkMode }) {
+function Tasks({ styling, isDarkMode, todo }) {
     const [activeFilter, setActiveFilter] = useState("All");
     const [showToast, setShowToast] = useState(false);
 
@@ -33,7 +33,37 @@ function Tasks({ styling, isDarkMode }) {
             className="task-containert"
             style={styling.input_field_backgroundColor}
         >
-            <div className="tasks"></div>
+            <div className="tasks-list">
+                {/* each task  ===== 1*/}
+                {todo.map((each, index) => (
+                    <div className="todo-task" key={each.id || index}>
+                        <div className="todo-task__container">
+                            <div className="todo-task__info">
+                                <div
+                                    className="todo-task__status-indicator"
+                                    style={styling?.circleColor}
+                                ></div>
+                                <p className="todo-task__text">{each.text}</p>
+                            </div>
+                            <button
+                                className="todo-task__delete-btn"
+                                aria-label="Delete task"
+                                onClick={() => handleDelete(each.id)}
+                            >
+                                <img
+                                    src={cross}
+                                    alt="Delete"
+                                    className="todo-task__delete-icon"
+                                />
+                            </button>
+                        </div>
+                        <hr
+                            style={styling?.circleColor}
+                            className="todo-task__divider"
+                        />
+                    </div>
+                ))}
+            </div>
             <footer>
                 <p>5 items left</p>
                 <div className="task-filters">
