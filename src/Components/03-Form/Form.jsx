@@ -36,7 +36,7 @@ function Form({ styling , setTodo , todo}) {
                 style={styling?.input_field_backgroundColor}
                 onClick={handleContainerClick}
             >
-                <div className="circle" style={styling?.circleColor}></div>
+                <span className="circle" style={styling?.circleColor}></span>
                 <input
                     value={input}
                     ref={inputRef}
