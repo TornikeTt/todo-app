@@ -28,6 +28,6 @@ This app allows users to manage their daily tasks with features like adding, del
 ## 🌍 Live Demo
 
 Check out the live version of the project here:  
-[Live Demo](https://sensational-starship-7f1f7e.netlify.app/)
+[Live Demo](https://mellow-bublanina-fed25b.netlify.app/)
 ---
 

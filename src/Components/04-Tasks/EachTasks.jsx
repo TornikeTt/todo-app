@@ -1,5 +1,5 @@
 import {useState} from "react";
-import "./eachTasks.scss";
+import "./EachTasks.scss";
 
 import cross from "/images/icon-cross.svg";
 import check from "/images/icon-check.svg";
