@@ -53,6 +53,7 @@ function Tasks({ styling, isDarkMode, setTodo, todo }) {
                 setTodo={setTodo}
                 todo={todo}
                 filteredTodos={filteredTodos}
+                isDarkMode={isDarkMode}
             />
 
             <footer>

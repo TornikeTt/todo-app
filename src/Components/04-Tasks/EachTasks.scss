@@ -29,12 +29,6 @@
         justify-content: center;
         align-items: center;
        
-        &:hover { 
-            border: 1px solid transparent;
-            background: linear-gradient(hsl(237, 14%, 26%), hsl(237, 14%, 26%)) padding-box,
-            linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
-            border-radius: 50%;
-        }
 
         .circleColor { 
           width: 100%;
@@ -45,6 +39,24 @@
           justify-content: center;
           align-items: center;
           background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+        }
+      }
+
+      .dark { 
+        &:hover { 
+            border: 1px solid transparent;
+            background: linear-gradient(hsl(237, 14%, 26%), hsl(237, 14%, 26%)) padding-box,
+            linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+            border-radius: 50%;
+        }
+      }
+
+      .light { 
+        &:hover { 
+            border: 1px solid transparent;
+            background: linear-gradient(white,white) padding-box,
+            linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+            border-radius: 50%;
         }
       }
 

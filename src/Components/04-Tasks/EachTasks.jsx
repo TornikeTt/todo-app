@@ -5,7 +5,7 @@ import cross from "/images/icon-cross.svg";
 import check from "/images/icon-check.svg";
 
 
-function EachTasks({styling, todo, setTodo, filteredTodos}) {
+function EachTasks({styling, todo, setTodo, filteredTodos, isDarkMode}) {
     const [delete_button_hover, set_Delete_button_hover] = useState(null)
     const [statusIndicatro_mouse, setStatusIndicator_mouse] = useState(null)
 
@@ -55,8 +55,7 @@ function EachTasks({styling, todo, setTodo, filteredTodos}) {
                     >
                         <div className="todo-task__info">
                             <div 
-                                className="todo-task__status-indicator" 
-
+                                className={`todo-task__status-indicator ${isDarkMode === true? "dark" : "light"}`}
                                 onMouseEnter={(e) => satustIndicator_handler(e, each.id)}
                                 onMouseLeave={(e) => satustIndicator_handler(e, each.id)}
                                 style={statusIndicatro_mouse !== each.id? styling?.circleColor : {}}
